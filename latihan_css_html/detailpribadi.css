@@ -1,0 +1,100 @@
+
+.header{
+    background-image: url(background.jpg);
+    background-size: cover;
+    border-radius: 50px;
+    margin: auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    color: whitesmoke;
+    animation: blink 1s infinite;
+    text-shadow: 
+        0 0 5px white, 
+        0 0 10px white, 
+        0 0 20px green, 
+        0 0 30px green, 
+        0 0 40px green, 
+        0 0 50px lime, 
+        0 0 60px lime;
+}
+
+td{
+    padding-right: 5px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.box{
+    margin: 0 auto;
+    border: 2px solid black;
+    display: flex;  /* fungsi flex sendiri adalah untuk memasukkan blog yang ada dalam container untuk selanjutnya baru kita tambahkan tag baru namanya flex-direction, flex-direction ini ada 4 : row (dari depan kebelakang), row-reverse (dari belakang ke depan), column (dari atas kebawah), dan column-reverse (dari bawah ke atas) */
+    flex-direction: row;
+    background-color: white;
+    text-align: left;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    padding: 30px;
+    box-shadow: -30px -15px 5px rgba(0, 0, 0, 0.5); /* nilai pertama jika positif bayangan akan kekanan namun ketika negatif akan kekiri, nilai kedua jika positif bayangan kebawah, namun jika negatif bayangan akan ke atas, nilai ketiga adalah bayangan semakin kecil nilai maka semakin pekat bayangan, poin ke empat warna bayangan*/
+}
+
+.box:hover{
+    transition: box-shadow 0.7s ease-in-out;
+    box-shadow: -30px -15px 9px rgba(0, 0, 0, 0.5); /* nilai pertama jika positif bayangan akan kekanan namun ketika negatif akan kekiri, nilai kedua jika positif bayangan kebawah, namun jika negatif bayangan akan ke atas, nilai ketiga adalah bayangan semakin kecil nilai maka semakin pekat bayangan, poin ke empat warna bayangan*/
+}
+
+.menu{
+    margin-left: 200px;
+    font-size: 20px;
+}
+
+span{
+    padding: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;    
+}
+
+.box div{
+    width: 500px;
+    height: 400px;
+    margin: 10px;
+}
+
+body {
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detailpribadi.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>PORTOFOLIO</h1>
+
+        <!-- <div class="menu">
+            <span> <a href="">Tentang Saya</a></span>
+            <span><a href="">Kontak</a></span>
+        </div><br> -->
+        <div>
+        <div class="box">
+            <p>Perkenalkan, nama saya adalah Ade zevimarino, tempat tanggal lahir Padang 25 November 1995, dan pendidikan terakhir saya di STMIK-AMIK Jayanusa Padang angkatan 2017 lulusan tahun 2021</p>
+
+            <p>Anak pertama dari 3 orang bersaudara, dan status dalam keluarga anak kandung</p>
+
+            <p>saya memiliki kemampuan di bidang web programming terutama menggunakan bahasa pemrogaman seperti PHP dan Javascript. Saya juga menguasai beberapa framework CSS sperti Tailwind.CSS dan Bootstrap, selain menguasai framework CSS, saya juga bisa menggunakan Framework bahasa pemrograman backend seperti PHP, misalnya Codeigniter 4 dan Laravel 11</p>
+
+            <p>
+                untuk database sendiri, saya biasa menggunakan database berbasis MYSQL
+            </p>
+
+            <p>
+                diluar penguasaan web programming, saya juga bisa mengggunakan beberapa tool desain seperti canva dan photoshop dan microsoft office, seperti : word, excel, access dan power point
+            </p>
+
+            <p>
+                Kelebihan saya secara pribadi adalah jujur, disiplin, bertanggung jawab, dan mampu kerjasama tim, kekurangan yang saya miliki adalah mungkin sedikit tergesa gesa, gampang bimbang dan mudah percaya pada orang.
+            </p>
+
+            <h6><a href="projek.html" style="text-decoration: underline; color: black; font-size: 15px;">MY Project</a></h6>&nbsp;&nbsp;&nbsp;
+            <h6><a href="index.html" style="text-decoration: underline; color: black; font-size: 15px;">Kembali</a></h6>
+        </div>
+    </div> <br><br><br>
+    </div>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault(); // Mencegah default redirect
+                const href = this.getAttribute("href");
+
+                // Tambahkan efek fade-out
+                document.body.classList.add("fade-out");
+
+                // Tunggu animasi selesai, lalu arahkan ke halaman berikutnya
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // Sesuaikan durasi dengan CSS transition
+            });
+        });
+    });
+</script>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="latihan.css">
+    <title>Document</title>
+    <style>
+        details {
+            font-size: 16px;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+        }
+
+        summary:hover {
+            font-weight: bold;
+            cursor: pointer;
+            color: green;
+            font-style: italic;
+        }
+
+        .profil {
+            color: black;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>PORTOFOLIO</h1>
+
+        <!-- <div class="menu">
+            <span> <a href="">Tentang Saya</a></span>
+            <span><a href="">Kontak</a></span>
+        </div><br> -->
+        <div class="box">
+            <div class="satu">
+                <br>Profil Pribadi
+            </div>
+
+            <div class="dua"><br>
+                Curiculum Vitae <br>
+                <p style="font-size: 15px;" >
+                    <img src="pngwing.com.png" alt="" width="12px">
+                        <a href="https://www.facebook.com/ade.anfield.5">ade_zevi</a>
+                    <img src="ig.png" alt="" width="12px">
+                        <a href="https://www.instagram.com/ade__zevi/">ade__zevi</a>
+                    <img src="github.png" alt="" width="12px" style="background-color: white; border-radius: 5px;">
+                        <a href="https://github.com/adezevi61">adezevi61</a>
+                    <img src="linkedin.png" alt="" width="12px">
+                        <a href="https://id.linkedin.com/in/ade-zevimarino-494b35158?trk=public_profile_samename-profile">ade zevimarino</a>
+                </p>
+                <center><p style="color: black;"></p></center>
+
+                <table border="1" style="background-color: green; border-color: white; border-style: dashed;">
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td>Ade Zevimarino</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tempat Lahir</td>
+                        <td>:</td>
+                        <td>Padang</td>
+                    </tr>
+
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td>Bungus, Padang</td>
+                    </tr>
+
+                    <tr>
+                        <td>Pendidikan Terakhir</td>
+                        <td>:</td>
+                        <td>STMIK Jayanusa Padang</td>
+                    </tr>
+
+                    <tr>
+                        <td>No. Handphone</td>
+                        <td>:</td>
+                        <td>0895xxxxxxxxx</td>
+                    </tr>
+
+                    <tr>
+                        <td>Status</td>
+                        <td>:</td>
+                        <td>Single</td>
+                    </tr>
+                </table>
+
+                <h6>more information klik :  <a href="detailpribadi.html" style="text-decoration: underline;"> my profile</a> <br> or see my project :<a href="projek.html" style="text-decoration: underline;"> My project</a></h6>
+            </div>
+        </div> <br>
+    </div>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault(); // Mencegah default redirect
+                const href = this.getAttribute("href");
+
+                // Tambahkan efek fade-out
+                document.body.classList.add("fade-out");
+
+                // Tunggu animasi selesai, lalu arahkan ke halaman berikutnya
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // Sesuaikan durasi dengan CSS transition
+            });
+        });
+    });
+</script>
+
